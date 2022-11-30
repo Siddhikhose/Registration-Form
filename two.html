@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: black;
+}
+h1{
+    color: indianred;
+    text-align: center;
+    margin-bottom: 2em;
+}
+.container{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:2em;
+}
+
+.registrationcontainer{
+    font-weight: 350;
+    justify-self: center;
+    width:auto;
+    height:auto;
+    padding:1em;
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:1em;
+   
+    font-size: 20px;
+    background-color: palevioletred;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+    background-blend-mode: soft-light,screen;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.registrationcontainer input{
+    padding:0.5em;
+    outline:none;
+    font-weight: 700;
+}
+.submit{
+    width:50%;
+    padding:0.5em;
+    color: black;
+    font-weight: 800;
+}
+.output{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:0.5em;
+    justify-items: center;
+}
+.addData{
+    text-align: center;
+    width:70%;
+    height:auto;
+    padding:1em;
+    background-color: blue;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+    background-blend-mode: soft-light,screen;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.output .addData img{
+    width:150px;
+    height:150px;
+    
+}
+/*Responsiveness*/
+@media all and (max-width:900px){
+    .output{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:0.5em;
+        justify-items: center;
+        
+    }
+
+}
+@media all and (max-width:400px){
+    .container{
+        padding:0.4em;
+    }
+    .registrationcontainer{
+        padding:0.5em;
+    }
+    .output{
+        display:grid;
+        grid-template-columns: 1fr;
+        gap:0.5em;
+        justify-items: center;
+    }
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+   <h1>Enrolled Candidates</h1>
+    <div class="container">
+        
+       <div class="registrationcontainer">
+
+        <div class="img">
+        <label>Image Url:</label>
+        <input type="text" id="img" name="img" placeholder="Enter your img Id">
+        </div>
+       
+        <div class="name">
+        <label>Name:</label>
+        <input type="text" id="name" name="Name" placeholder="Enter Your Name"/>
+        </div>
+       
+        <div class="email">
+        <label>E-Mail:</label>
+        <input type="email" id="email" name="Email" placeholder="Enter your Email Id"/>
+        </div>
+        <div class="websitelink">
+        <label>Website Link:</label>
+        <input type="text" id="websitelink" name="WebsiteLink" placeholder="Enter your Website Link"/>
+        </div>
+        <div class="skills">
+        <label>Enter Your Skills:</label>
+        <input type="text" id="skills" name="Skills" placeholder="Enter your Skills"/>
+        </div>
+        <button class="submit">Submit</button>
+       </div>
+       <div class="output">
+           
+       </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
